@@ -14,8 +14,8 @@ const Footer = () => {
           <div className="transform transition-all duration-500 hover:-translate-y-1">
             <div className="mb-4">
               <img 
-                src="/logo.png" 
-                alt="BrokerHub Logo" 
+                src="/invictasaudelogo.png" 
+                alt="Invicta Saude Logo" 
                 className="h-12 w-auto"
               />
             </div>
@@ -67,22 +67,22 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-start group">
                 <MapPin size={18} className="mr-2 mt-1 text-broker-primary group-hover:scale-125 transition-transform" />
-                <span>Av. Paulista, 1000, Conj. 101<br />São Paulo - SP, 01310-000</span>
+                <span>Av. Luciano das Neves, 1000, Conj. 101<br />Vila Velha - ES, 01310-000</span>
               </div>
               <div className="flex items-center group">
                 <Phone size={18} className="mr-2 text-broker-primary group-hover:scale-125 transition-transform" />
-                <span>(11) 9999-9999</span>
+                <span>(27) 9999-9999</span>
               </div>
               <div className="flex items-center group">
                 <Mail size={18} className="mr-2 text-broker-primary group-hover:scale-125 transition-transform" />
-                <span>contato@brokerhub.com.br</span>
+                <span>contato@invictasaude.com.br</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} BrokerHub. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Invicta Saúde. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
