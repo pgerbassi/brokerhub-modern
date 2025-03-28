@@ -77,7 +77,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-normal;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
   }
 }
 
@@ -87,7 +91,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-broker-primary mb-6;
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-broker-primary mb-6 tracking-tight;
   }
   
   .section-subtitle {
@@ -117,6 +121,17 @@
   
   .animate-bounce-slow {
     @apply animate-[bounce_3s_ease-in-out_infinite];
+  }
+}
+
+/* Update our InsuranceTypes component to use the new typography */
+@layer components {
+  .insurance-card-title {
+    @apply text-xl font-heading font-bold mb-2 text-broker-dark;
+  }
+  
+  .insurance-card-description {
+    @apply text-gray-600 font-sans;
   }
 }
 

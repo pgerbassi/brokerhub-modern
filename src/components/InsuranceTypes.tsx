@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Car, Home, Heart, Briefcase, Shield, Plane } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
@@ -60,8 +60,8 @@ const InsuranceTypes = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="text-broker-primary mb-4 transform transition-all duration-300 hover:scale-110">{insurance.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-broker-dark">{insurance.title}</h3>
-              <p className="text-gray-600">{insurance.description}</p>
+              <h3 className="insurance-card-title">{insurance.title}</h3>
+              <p className="insurance-card-description">{insurance.description}</p>
             </div>
           ))}
         </div>

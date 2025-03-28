@@ -14,7 +14,7 @@ const Partners = () => {
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-2xl font-semibold text-broker-dark mb-8">
+        <h2 className="text-center text-2xl font-heading font-semibold text-broker-dark mb-8">
           Principais Seguradoras Parceiras
         </h2>
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
