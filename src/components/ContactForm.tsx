@@ -30,7 +30,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-700">Email</h4>
-                  <p className="text-gray-600">contato@segurobroker.com.br</p>
+                  <p className="text-gray-600">contato@invictasaude.com.br</p>
                 </div>
               </div>
               
@@ -42,7 +42,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-700">Telefone</h4>
-                  <p className="text-gray-600">(11) 3456-7890</p>
+                  <p className="text-gray-600">(27) 3456-7890</p>
                 </div>
               </div>
               
@@ -55,7 +55,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-700">Endereço</h4>
-                  <p className="text-gray-600">Av. Paulista, 1000 - Bela Vista<br/>São Paulo - SP, 01310-100</p>
+                  <p className="text-gray-600">Av. Luciano das Neves, 1000 - Bela Vista<br/>Vila Velha - ES, 01310-100</p>
                 </div>
               </div>
             </div>
