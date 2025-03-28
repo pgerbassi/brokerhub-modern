@@ -1,8 +1,14 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Car, Home, Heart, Briefcase, Shield, Plane } from 'lucide-react';
+import { useInView } from 'react-intersection-observer';
 
 const InsuranceTypes = () => {
+  const { ref: sectionRef, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const insuranceTypes = [
     {
       icon: <Car size={36} />,
@@ -37,9 +43,9 @@ const InsuranceTypes = () => {
   ];
 
   return (
-    <section id="seguros" className="py-20 bg-gradient-to-br from-white to-broker-light">
+    <section id="seguros" ref={sectionRef} className="py-20 bg-gradient-to-br from-white to-broker-light">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="section-title">Tipos de Seguro</h2>
           <p className="section-subtitle max-w-3xl mx-auto">
             Oferecemos uma ampla gama de produtos de seguro para atender às suas necessidades específicas
@@ -50,9 +56,10 @@ const InsuranceTypes = () => {
           {insuranceTypes.map((insurance, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-t-4 border-broker-primary"
+              className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl border-t-4 border-broker-primary ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-broker-primary mb-4">{insurance.icon}</div>
+              <div className="text-broker-primary mb-4 transform transition-all duration-300 hover:scale-110">{insurance.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-broker-dark">{insurance.title}</h3>
               <p className="text-gray-600">{insurance.description}</p>
             </div>

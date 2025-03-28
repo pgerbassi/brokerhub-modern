@@ -1,14 +1,17 @@
 
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Footer = () => {
+  const isMobile = useIsMobile();
+
   return (
     <footer className="bg-broker-dark text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="transform transition-all duration-500 hover:-translate-y-1">
             <div className="mb-4">
               <img 
                 src="/logo.png" 
@@ -21,57 +24,57 @@ const Footer = () => {
               para pessoas e empresas em todo o Brasil.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-broker-primary transition-colors">
+              <a href="#" className="hover:text-broker-primary transition-colors transform hover:scale-125">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-broker-primary transition-colors">
+              <a href="#" className="hover:text-broker-primary transition-colors transform hover:scale-125">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-broker-primary transition-colors">
+              <a href="#" className="hover:text-broker-primary transition-colors transform hover:scale-125">
                 <Linkedin size={20} />
               </a>
             </div>
           </div>
 
           {/* Links */}
-          <div>
+          <div className="transform transition-all duration-500 hover:-translate-y-1">
             <h3 className="font-semibold text-xl mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="#sobre" className="hover:text-broker-primary transition-colors">Sobre Nós</a></li>
-              <li><a href="#servicos" className="hover:text-broker-primary transition-colors">Serviços</a></li>
-              <li><a href="#seguros" className="hover:text-broker-primary transition-colors">Tipos de Seguros</a></li>
-              <li><a href="#contato" className="hover:text-broker-primary transition-colors">Contato</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Política de Privacidade</a></li>
+              <li><a href="#sobre" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Sobre Nós</span></a></li>
+              <li><a href="#servicos" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Serviços</span></a></li>
+              <li><a href="#seguros" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Tipos de Seguros</span></a></li>
+              <li><a href="#contato" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Contato</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Política de Privacidade</span></a></li>
             </ul>
           </div>
 
           {/* Types of Insurance */}
-          <div>
+          <div className="transform transition-all duration-500 hover:-translate-y-1">
             <h3 className="font-semibold text-xl mb-4">Seguros</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Seguro Auto</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Seguro Residencial</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Seguro de Vida</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Seguro Empresarial</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Plano de Saúde</a></li>
-              <li><a href="#" className="hover:text-broker-primary transition-colors">Seguro Viagem</a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Seguro Auto</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Seguro Residencial</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Seguro de Vida</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Seguro Empresarial</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Plano de Saúde</span></a></li>
+              <li><a href="#" className="hover:text-broker-primary transition-colors flex items-center"><span className="transform transition-all duration-300 hover:translate-x-2">Seguro Viagem</span></a></li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="transform transition-all duration-500 hover:-translate-y-1">
             <h3 className="font-semibold text-xl mb-4">Contato</h3>
             <div className="space-y-3 text-gray-300">
-              <div className="flex items-start">
-                <MapPin size={18} className="mr-2 mt-1 text-broker-primary" />
+              <div className="flex items-start group">
+                <MapPin size={18} className="mr-2 mt-1 text-broker-primary group-hover:scale-125 transition-transform" />
                 <span>Av. Paulista, 1000, Conj. 101<br />São Paulo - SP, 01310-000</span>
               </div>
-              <div className="flex items-center">
-                <Phone size={18} className="mr-2 text-broker-primary" />
+              <div className="flex items-center group">
+                <Phone size={18} className="mr-2 text-broker-primary group-hover:scale-125 transition-transform" />
                 <span>(11) 9999-9999</span>
               </div>
-              <div className="flex items-center">
-                <Mail size={18} className="mr-2 text-broker-primary" />
+              <div className="flex items-center group">
+                <Mail size={18} className="mr-2 text-broker-primary group-hover:scale-125 transition-transform" />
                 <span>contato@brokerhub.com.br</span>
               </div>
             </div>
