@@ -9,9 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center mb-4">
-              <span className="text-broker-primary font-bold text-2xl">Broker</span>
-              <span className="text-broker-secondary font-bold text-2xl">Hub</span>
+            <div className="mb-4">
+              <img 
+                src="/logo.png" 
+                alt="BrokerHub Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-gray-300 mb-4">
               Há mais de 15 anos oferecendo as melhores soluções em seguros 

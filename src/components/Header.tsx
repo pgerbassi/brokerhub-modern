@@ -26,8 +26,11 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <span className="text-broker-primary font-bold text-2xl">Broker</span>
-            <span className="text-broker-secondary font-bold text-2xl">Hub</span>
+            <img 
+              src="/logo.png" 
+              alt="BrokerHub Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -66,7 +69,7 @@ const Header = () => {
             <a href="#inicio" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Início</a>
             <a href="#sobre" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Sobre</a>
             <a href="#servicos" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Serviços</a>
-            <a href="#seguros" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Seguros</a>
+            <a href="#seguros" className="text-broker-dark hover:text-broker-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Seguros</a>
             <a href="#depoimentos" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Depoimentos</a>
             <a href="#contato" className="text-broker-dark hover:text-broker-primary font-medium transition-colors" onClick={() => setMobileMenuOpen(false)}>Contato</a>
             <Button className="btn-primary w-full">Solicitar Cotação</Button>
