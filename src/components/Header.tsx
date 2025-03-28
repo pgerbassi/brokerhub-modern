@@ -29,7 +29,7 @@ const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center animate-fade-in">
             <img 
-              src="/logo.png" 
+              src="/invictasaudelogo.png" 
               alt="BrokerHub Logo" 
               className="h-10 md:h-12 w-auto"
             />
